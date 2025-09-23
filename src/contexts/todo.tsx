@@ -3,9 +3,11 @@ import type { Todo, TodoContextType, TodoPayload } from "./todo.types";
 import { createContext, useReducer } from "react";
 
 function todoReducer(state: Todo[], action: { type: string; payload: TodoPayload }): Todo[] {
+  const { id, text = '', completed = false } = action.payload;
+
   switch (action.type) {
     case 'ADD_TODO':
-      return [...state, action.payload];
+      return [...state, { id, text, completed }];
     case 'TOGGLE_TODO':
       return state.map(todo =>
         todo.id === action.payload.id ? { ...todo, completed: !todo.completed } : todo
@@ -28,11 +30,11 @@ const TodoProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const toggleTodo = (id: number) => {
-    dispatch({ type: 'TOGGLE_TODO', payload: { id, text: '', completed: false } });
+    dispatch({ type: 'TOGGLE_TODO', payload: { id } });
   };
 
   const removeTodo = (id: number) => {
-    dispatch({ type: 'REMOVE_TODO', payload: { id, text: '', completed: false } });
+    dispatch({ type: 'REMOVE_TODO', payload: { id } });
   };
 
   return (

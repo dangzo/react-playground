@@ -6,8 +6,8 @@ export interface Todo {
 
 export interface TodoPayload {
   id: number;
-  text: string;
-  completed: boolean;
+  text?: string;
+  completed?: boolean;
 }
 
 export interface TodoContextType {
