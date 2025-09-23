@@ -1,10 +1,12 @@
 import './App.css'
+import { TodoList } from './components/TodoList'
+import { TodoProvider } from './contexts/todo'
 
 function App() {
   return (
-    <>
-      <span>Empty.</span>
-    </>
+    <TodoProvider>
+      <TodoList />
+    </TodoProvider>
   )
 }
 
