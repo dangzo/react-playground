@@ -1,6 +1,7 @@
 
 import { useContext } from 'react';
 import { TodoContext } from '../contexts/todo';
+import { TodoAdd } from './TodoAdd';
 
 export const TodoList = () => {
   const todoContext = useContext(TodoContext);
@@ -9,23 +10,8 @@ export const TodoList = () => {
     return <div>Loading...</div>;
   }
 
-  function handleAddTodo() {
-    if (!todoContext) {
-      return;
-    }
-
-    const input = document.getElementById('new-todo-text') as HTMLInputElement;
-    if (input.value.trim()) {
-      todoContext.addTodo(input.value.trim());
-      input.value = '';
-    }
-  }
-
   return <>
-    <div>
-      <input type="text" id="new-todo-text" placeholder="Type here" className="border p-2 mr-2" />
-      <button onClick={handleAddTodo}>Add Todo</button>
-    </div>
+    <TodoAdd />
 
     <ul>
       {todoContext.todos.map(todo => (
