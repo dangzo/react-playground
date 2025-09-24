@@ -10,21 +10,23 @@ export const TodoList = () => {
     return <div>Loading...</div>;
   }
 
-  return <>
-    <TodoAdd />
+  return (
+    <div className='w-[600px] flex flex-col'>
+      <TodoAdd />
 
-    <ul>
-      {todoContext.todos.map(todo => (
-        <li key={todo.id}>
-          <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
-            {todo.text}
-          </span>
-          <button onClick={() => todoContext.toggleTodo(todo.id)}>
-            {todo.completed ? 'Undo' : 'Complete'}
-          </button>
-          <button onClick={() => todoContext.removeTodo(todo.id)}>Remove</button>
-        </li>
-      ))}
-    </ul>
-  </>;
+      <ul>
+        {todoContext.todos.map(todo => (
+          <li key={todo.id} className="flex items-center gap-x-2 mb-1">
+            <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }} className="flex-1 text-left">
+              {todo.text}
+            </span>
+            <button onClick={() => todoContext.toggleTodo(todo.id)}>
+              {todo.completed ? 'Undo' : 'Complete'}
+            </button>
+            <button onClick={() => todoContext.removeTodo(todo.id)}>Remove</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
