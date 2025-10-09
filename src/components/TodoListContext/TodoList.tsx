@@ -17,7 +17,7 @@ export const TodoList = () => {
       <ul>
         {todoContext.todos.map(todo => (
           <li key={todo.id} className="flex items-center gap-x-2 mb-1">
-            <input type="checkbox" checked={todo.completed} onClick={() => todoContext.toggleTodo(todo.id)} />
+            <input type="checkbox" checked={todo.completed} onClick={() => todoContext.toggleTodo(todo.id)} onChange={() => null} />
             <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }} className="flex-1 text-left">
               {todo.text}
             </span>
