@@ -1,6 +1,6 @@
 
 import { TodoAdd } from './TodoAdd';
-import { useTodoStore } from '../../store/useTodoStore';
+import { useTodoStore } from '../../stores/todo-store';
 
 export const TodoList = () => {
   const { todos, toggleTodo, removeTodo } = useTodoStore();
