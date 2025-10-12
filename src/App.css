@@ -9,4 +9,13 @@
     max-width: 1080px;
     margin: auto;
   }
+
+  > header a {
+    font-weight: 600;
+    color: #3c5ea7;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
