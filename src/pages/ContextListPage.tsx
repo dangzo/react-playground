@@ -3,7 +3,7 @@ import { TodoProvider } from "@/contexts/todo";
 
 const TodoListContextPage = function () {
   return (
-    <div className="flex flex-col w-full p-20">
+    <div className="flex flex-col w-full">
       <header>
         <h1 className="text-left mb-8">Context API</h1>
       </header>

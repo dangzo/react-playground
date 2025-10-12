@@ -6,7 +6,7 @@ export const TodoList = () => {
   const { todos, toggleTodo, removeTodo } = useTodoStore();
 
   return (
-    <div className='w-[600px] flex flex-col'>
+    <div className='flex flex-col'>
       <TodoAdd />
 
       <ul>
