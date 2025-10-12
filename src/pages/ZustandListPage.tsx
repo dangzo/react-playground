@@ -1,4 +1,4 @@
-import { TodoList } from '../components/TodoListZustand';
+import { TodoList } from '@/components/TodoListZustand';
 
 const TodoListZustandPage = function () {
   return (

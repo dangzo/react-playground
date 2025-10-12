@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { useTodoStore } from '../../stores/todo-store';
+import { useTodoStore } from '@/stores/todo-store';
 
 export const TodoAdd = () => {
   const { addTodo } = useTodoStore();
