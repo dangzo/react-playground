@@ -7,15 +7,15 @@ import TodoListContextPage from './pages/TodoListContextPage';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <IndexPage />,
+    Component: IndexPage,
   },
   {
     path: "/zustand-list",
-    element: <TodoListZustandPage />,
+    Component: TodoListZustandPage,
   },
   {
     path: "/context-list",
-    element: <TodoListContextPage />,
+    Component: TodoListContextPage,
   },
 ]);
 

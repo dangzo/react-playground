@@ -1,10 +1,11 @@
+import { Routes } from './routes'
 import './App.css'
-import { TodoList as TodoListContext } from './components/TodoListContext/TodoList'
-import { TodoList as TodoListZustand } from './components/TodoListZustand/TodoList'
-import { TodoProvider } from './contexts/todo'
 
 function App() {
   return (
+    <Routes />
+
+    /* <Routes /> 
     <div className="flex flex-row justify-between">
       <div className="flex flex-col w-full p-20">
         <header>
@@ -22,6 +23,7 @@ function App() {
         <TodoListZustand />
       </div>
     </div>
+    */
   )
 }
 
