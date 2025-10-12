@@ -1,8 +1,9 @@
 import { createBrowserRouter } from 'react-router';
 import { RouterProvider } from 'react-router/dom';
+
 import IndexPage from './pages/IndexPage';
-import TodoListZustandPage from './pages/TodoListPage';
-import TodoListContextPage from './pages/TodoListContextPage';
+import ZustandListPage from './pages/ZustandListPage';
+import ContextListPage from './pages/ContextListPage';
 
 const router = createBrowserRouter([
   {
@@ -11,11 +12,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/zustand-list",
-    Component: TodoListZustandPage,
+    Component: ZustandListPage,
   },
   {
     path: "/context-list",
-    Component: TodoListContextPage,
+    Component: ContextListPage,
   },
 ]);
 
