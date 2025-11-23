@@ -1,9 +1,16 @@
 
 import { TodoAdd } from './TodoAdd';
-import { useTodoStore } from '@/stores/zustand-store';
+import type { RootState } from '@/stores/redux-store';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTodo as toggleTodoAction, removeTodo as removeTodoAction } from '@/stores/redux-features/todo-slice';
+
 
 export const TodoList = () => {
-  const { todos, toggleTodo, removeTodo } = useTodoStore();
+  const todos = useSelector((state: RootState) => state.todos.todos);
+  const dispatch = useDispatch();
+
+  const toggleTodo = (id: number) => dispatch(toggleTodoAction(id));
+  const removeTodo = (id: number) => dispatch(removeTodoAction(id));
 
   return (
     <div className='flex flex-col'>

@@ -1,8 +1,10 @@
 import { useRef } from 'react';
-import { useTodoStore } from '@/stores/zustand-store';
+import { useDispatch } from 'react-redux';
+import { addTodo as addTodoAction } from '@/stores/redux-features/todo-slice';
 
 export const TodoAdd = () => {
-  const { addTodo } = useTodoStore();
+  const dispatch = useDispatch();
+  const addTodo = (text: string) => dispatch(addTodoAction(text));
 
   const inputRef = useRef<HTMLInputElement>(null);
 

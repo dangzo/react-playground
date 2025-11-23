@@ -5,6 +5,7 @@ import DefaultLayout from './layouts/Default';
 import IndexPage from './pages/IndexPage';
 import ZustandListPage from './pages/ZustandListPage';
 import ContextListPage from './pages/ContextListPage';
+import ReduxToolkitListPage from './pages/ReduxToolkitListPage';
 
 const routes = [
   {
@@ -22,6 +23,10 @@ const routes = [
       {
         path: "/context-list",
         Component: ContextListPage,
+      },
+      {
+        path: "/redux-toolkit-list",
+        Component: ReduxToolkitListPage,
       },
     ]
   },

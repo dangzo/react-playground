@@ -7,6 +7,7 @@ const Navigation = function () {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/zustand-list'>Zustand list</NavLink></li>
         <li><NavLink to='/context-list'>Context API list</NavLink></li>
+        <li><NavLink to='/redux-toolkit-list'>Redux Toolkit list</NavLink></li>
       </ul>
     </nav>
   )
