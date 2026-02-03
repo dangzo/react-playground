@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useTodoStore } from '@/stores/zustand-store';
 
-export const TodoAdd = () => {
+const TodoAdd = () => {
   const { addTodo } = useTodoStore();
 
   const inputRef = useRef<HTMLInputElement>(null);
@@ -32,4 +32,6 @@ export const TodoAdd = () => {
       <button onClick={handleAddTodo}>Add Todo</button>
     </div>
   );
-}
+};
+
+export default TodoAdd;
