@@ -1,11 +1,11 @@
-import { useContext } from "react";
-import { TodoContext } from "@/contexts/todo";
+import { useContext } from 'react';
+import { TodoContext } from '@/contexts/todo';
 
-export const TodoAdd = () => {
+const TodoAdd = () => {
   const todoContext = useContext(TodoContext);
 
   if (!todoContext) {
-    throw new Error("TodoAdd must be used within a TodoProvider");
+    throw new Error('TodoAdd must be used within a TodoProvider');
   }
 
   function handleOnKeyDown(event: React.KeyboardEvent) {
@@ -38,4 +38,6 @@ export const TodoAdd = () => {
       <button onClick={handleAddTodo}>Add Todo</button>
     </div>
   );
-}
+};
+
+export default TodoAdd;
